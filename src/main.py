@@ -70,7 +70,6 @@ if __name__ == '__main__':
             plt.plot( np.arange(input.size(1)) , yi[:input.size(1)], color, linewidth = 2.0)   # (1228,) (1228,)
             plt.plot( np.arange(input.size(1), input.size(1) + future), yi[input.size(1):], color + ':', linewidth = 2.0)
         
-        
         draw(max_num*y[0], 'r')    # [1x 1999]
         #draw(y[1], 'g')
         # draw(y[2], 'b')
