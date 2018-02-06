@@ -50,7 +50,7 @@ if __name__ == '__main__':
             return loss
         optimizer.step(closure)
         # begin to predict
-        future = 30
+        future = 60
         print("before call seq ----------------------------------------------------------------------------------------------")
         pred = seq(test_input, future = future)  #pred: [3, 1593] # test_input : [3 , 1228] , future =1000
         print("pred size ", pred.size())
@@ -58,7 +58,7 @@ if __name__ == '__main__':
         y = pred.data.numpy()  # [3, 1593]
         # draw the result
         plt.figure(figsize=(30,10))
-        plt.title('Predict future values for time sequences (Naver) from 2013-1-1 ~ 2017-12-31 \n(Dashlines are predicted values)', fontsize=30)
+        plt.title('Predict future values for time sequences (Naver) from 2013-1-1 ~ 2017-12-31 \n(Dashlines are predicted values (2018-1-1 ~ 2018-2)', fontsize=30)
         plt.xlabel('Date', fontsize=20)
         plt.ylabel('Korean won', fontsize=20)
         plt.xticks(fontsize=20)
