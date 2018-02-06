@@ -58,9 +58,9 @@ if __name__ == '__main__':
         y = pred.data.numpy()  # [3, 1593]
         # draw the result
         plt.figure(figsize=(30,10))
-        plt.title('Predict future values for time sequences\n(Dashlines are predicted values)', fontsize=30)
-        plt.xlabel('x', fontsize=20)
-        plt.ylabel('y', fontsize=20)
+        plt.title('Predict future values for time sequences (Naver) from 2013-1-1 ~ 2017-12-31 \n(Dashlines are predicted values)', fontsize=30)
+        plt.xlabel('Date', fontsize=20)
+        plt.ylabel('Korean won', fontsize=20)
         plt.xticks(fontsize=20)
         plt.yticks(fontsize=20)
         
@@ -68,7 +68,7 @@ if __name__ == '__main__':
             print(np.arange(input.size(1)).shape)
             print(yi[:input.size(1)].shape)     
             plt.plot( np.arange(input.size(1)) , yi[:input.size(1)], color, linewidth = 2.0)   # (1228,) (1228,)
-            plt.plot( np.arange(input.size(1), input.size(1) + future), yi[input.size(1):], color + ':', linewidth = 2.0)
+            plt.plot( np.arange(input.size(1), input.size(1) + future), yi[input.size(1):], 'g' + ':', linewidth = 2.0)
         
         draw(max_num*y[0], 'r')    # [1x 1999]
         #draw(y[1], 'g')
